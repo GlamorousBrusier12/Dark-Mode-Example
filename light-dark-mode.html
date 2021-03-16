@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toggle Mode</title>
+	<style type="text/css">
+		#toggle-Button-section{
+			height: 30px;
+			width: 100px;
+			border :2px solid black;
+			border-radius: 25px;
+			margin-left: 35%;
+		}
+		#container{
+			position: fixed;
+			top: 30%;
+			left : 33%;
+		}
+		#toggle-Button{
+			background-color: black;
+			width: 28px;
+			border-radius: 50%;
+			height: 30px;
+			margin-top: 0px;
+			margin-left: 1px;
+		}
+		/*#toggle-Button:hover{
+			transform: translateX(72px);
+			transition: all 0.6s ease-in-out;
+		}*/
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="toggle-Button-section">
+			<div id="toggle-Button"></div>
+		</div>
+		<div >
+			<h1 id="Text">Click On the Toggle Button</h1>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var togglebut = document.getElementById('toggle-Button');
+		var togglecont = document.getElementById('toggle-Button-section');
+		var switche = false;
+		var cont = document.getElementsByTagName('body');
+		var text = document.getElementById('Text');
+		// console.log(switch);
+		togglebut.onclick = function fun(){
+			if (switche) {
+				togglebut.style = "transform: translateX(0px);transition: all 0.6s ease-in-out;";
+				cont[0].style = "background-color:white";
+				text.style = "color: black";
+				switche = false ;
+			}
+			else {
+				togglebut.style = "transform: translateX(72px);transition: all 0.6s ease-in-out;";
+				togglecont.style = "background-color: white";
+				cont[0].style = "background-color:black";
+				text.style = "color: white";
+				switche = true;
+			}
+		};
+	</script>
+</body>
+</html>
